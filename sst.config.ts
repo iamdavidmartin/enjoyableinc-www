@@ -17,7 +17,6 @@ export default $config({
   },
   async run() {
     new sst.aws.StaticSite("Site", {
-      path: "dist",
       build: {
         command: "bun run build",
         output: "dist",
