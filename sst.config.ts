@@ -9,7 +9,7 @@ export default $config({
       home: "aws",
       providers: {
         aws: {
-          profile: "happygo-www",
+          profile: process.env.CI ? undefined : "happygo-www",
           region: "us-east-1",
         },
       },
