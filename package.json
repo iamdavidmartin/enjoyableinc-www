@@ -4,8 +4,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "mkdir -p dist && bunx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --minify && cp ./src/index.html ./dist/index.html",
-    "dev": "bun --hot ./dev.ts"
+    "build": "mkdir -p dist && bunx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --minify && cp ./src/index.html ./dist/index.html && cp -r ./src/assets ./dist/",
+    "dev": "mkdir -p dist && bunx @tailwindcss/cli -i ./src/styles.css -o ./dist/styles.css --watch & bun --hot ./dev.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
